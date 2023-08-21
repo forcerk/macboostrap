@@ -113,3 +113,6 @@
         dest: /Users/{{ lookup('env', 'USER') }}/.zshrc
         owner: "{{ lookup('env', 'USER') }}"
         force: yes
+
+  roles:
+    - ansible-role-oh-my-zsh-p10k-master
