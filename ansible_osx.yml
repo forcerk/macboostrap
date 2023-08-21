@@ -75,6 +75,10 @@
         owner: "{{ lookup('env', 'USER') }}"
         force: yes
 
+    - name: Register espanso
+      shell:
+        "espanso service register"
+
     - name: Import espanso profile
       copy:
         src: "/Users/{{ lookup('env', 'USER') }}/OneDrive - VMware, Inc/Automator/bootstrap/macboostrap/templates/espanso.yml"
