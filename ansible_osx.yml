@@ -77,5 +77,5 @@
 
     - name: Import espanso profile
       copy:
-        src: "~/OneDrive - VMware, Inc/Automator/macbootstrap/templates/espanso.yml"
-        dest: "~/Library/Application Support/espanso/match/base.yml"
+        src: "/Users/{{ lookup('env', 'USER') }}/OneDrive - VMware, Inc/Automator/bootstrap/macboostrap/templates/espanso.yml"
+        dest: "/Users/{{ lookup('env', 'USER') }}/Library/Application Support/espanso/match/base.yml"
