@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  roles:
+    - role: tomereli.oh_my_zsh_p10k
+      vars:
+        users:
+          - username: eboettcher
+        p10k_src_file: custom.p10k.zsh
