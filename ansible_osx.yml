@@ -42,51 +42,14 @@
         - visual-studio-code
         - brave-browser
 
-    # - name: "Install homebrew packages"
-    #   community.general.homebrew:
-    #     name: [
-    #       'autoconf',
-    #       'automake',
-    #       'aws-iam-authenticator',
-    #       'awscli',
-    #       'bfg',
-    #       'coreutils',
-    #       'curl',
-    #       'dbt@0.18.0',
-    #       'direnv',
-    #       'dnsmasq',
-    #       'fzf',
-    #       'gnu-time',
-    #       'gpg',
-    #       'heroku',
-    #       'htop',
-    #       'imagemagick@6',
-    #       'kubectx',
-    #       'kubernetes-cli',
-    #       'kubernetes-helm',
-    #       'libtool',
-    #       'libxslt',
-    #       'libyaml',
-    #       'mas',
-    #       'openssl' ,
-    #       'pkg-config',
-    #       'postgresql',
-    #       'rcm',
-    #       'readline',
-    #       'redis',
-    #       'sqlite3',
-    #       'tmux',
-    #       'unixodbc',
-    #       'unzip',
-    #       'vim',
-    #       'watchman',
-    #       'xz',
-    #       'yarn',
-    #       'zlib',
-    #       'zsh',
-    #     ]
-    #     state: present
-    #     update_homebrew: yes
+    - name: "Install homebrew packages"
+      community.general.homebrew:
+        name: [
+          'zsh',
+          'espanso',
+        ]
+        state: present
+        update_homebrew: yes
 
     - name: Get the path to ZSH
       become: false
@@ -114,6 +77,3 @@
         dest: /Users/{{ lookup('env', 'USER') }}/.zshrc
         owner: "{{ lookup('env', 'USER') }}"
         force: yes
-
-  roles:
-    - ansible-role-oh-my-zsh-p10k-master
