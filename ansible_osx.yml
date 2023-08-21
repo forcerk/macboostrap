@@ -18,7 +18,7 @@
         name: [
           romkatv/powerlevel10k,
           homebrew/cask,
-          #adoptopenjdk/openjdk,
+          adoptopenjdk/openjdk,
           #fishtown-analytics/dbt,
           #heroku/brew,
           #homebrew/cask-versions,
@@ -32,11 +32,7 @@
       ignore_errors: yes
       with_items:
         - espanso
-        - powerlevel10k
         - iterm2
-        - zsh
-        - zsh-completions
-        - openjdk@11
         - mos
         - shureplus-motiv
         - visual-studio-code
@@ -46,7 +42,8 @@
       community.general.homebrew:
         name: [
           'zsh',
-          'espanso',
+          'powerlevel10k',
+          'openjdk@11',
         ]
         state: present
         update_homebrew: yes
@@ -77,3 +74,8 @@
         dest: /Users/{{ lookup('env', 'USER') }}/.zshrc
         owner: "{{ lookup('env', 'USER') }}"
         force: yes
+
+    - name: Import espanso profile
+      copy:
+        src: "~/OneDrive - VMware, Inc/Automator/macbootstrap/templates/espanso.yml"
+        dest: "~/Library/Application Support/espanso/match/base.yml"

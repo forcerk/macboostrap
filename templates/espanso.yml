@@ -1,0 +1,29 @@
+matches:
+  - trigger: ":bss"
+    replace: "jan.reinhardt@beiersdorf.com; hagen.kossack@beiersdorf.com; pascal.kratz@beiersdorf.com"
+
+  - trigger: ":adm-rewe"
+    replace: "Thomas.Weidlich@rewe-group.com; nicolas.schnabel@rewe-group.com; Dirk.Schramm@rewe-group.com; udo.huepper@rewe-group.com; Roland.Winkler@rewe-group.com; stefan.meuser@rewe-group.com"
+
+  - trigger: ":rewe"
+    replace: "ralf.hoffmann@rewe-group.com; sebastian.quast@rewe-group.com; Thomas.Canalejas@rewe-group.com; Thomas.Weidlich@rewe-group.com; Dirk.Schramm@rewe-group.com; udo.huepper@rewe-group.com; Luis.CalventeMartinez@rewe-group.com; Markus.Dudek-Bloenigen@rewe-group.com; Rainer.Hatzfeld@rewe-group.com; Michael.Klein@rewe-group.com; Vanessa.Kroh@rewe-group.com; Andreas.Tigges@rewe-group.com; nicolas.schnabel@rewe-group.com; Roland.Winkler@rewe-group.com; Christian.Coronel@rewe-group.com; Thorsten.Nolden@rewe-group.com; Patrick.Gerhartz@rewe-group.com; Henryk.Kotzur@rewe-group.com; Benny.Kalbitz@rewe-group.com; Hubertus.Reger@rewe-group.com; Roland.Spitzer@rewe-group.com; stefan.meuser@rewe-group.com"
+
+  - trigger: ":ukd"
+    replace: "drexelius@med.uni-duesseldorf.de; eric.vorwald@med.uni-duesseldorf.de; benjamin.schidan@med.uni-duesseldorf.de; till.gilbert@med.uni-duesseldorf.de; Simon.Schneiders@med.uni-duesseldorf.de"
+
+  - trigger: ":ruv"
+    replace: "benjamin.schmidt@ruv.de; jan.reinl@ruv.de; christian.geis@ruv.de"
+
+  - trigger: ":now"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%d.%m: "
+
+  - trigger: ":vtcr"
+    replace: "tkrogull@vmware.com; umattern@vmware.com; sdistler@vmware.com; jsamson@vmware.com; muellerma@vmware.com; mzahn@vmware.com; mrottlander@vmware.com; tjunghaenel@vmware.com; sschlott@vmware.com"
+
+  - trigger: ":fujitsu"
+    replace: "alexander.dehoff@fujitsu.com; martin.dummer@fujitsu.com; elmar.meusel1@fujitsu.com; roland.schreitmueller@fujitsu.com; werner.treutz@fujitsu.com; axel.denfeld@fujitsu.com; christian.schehl@fujitsu.com; daniel.kliewer@fujitsu.com; philipp.kania@fujitsu.com; susanne.pfeuffer@fujitsu.com; daniel.stevens@fujitsu.com; dieter.nuesser@fujitsu.com"
